@@ -5,6 +5,9 @@
 ## Start server
 
 ```
+you@host$ git clone https://github.com/qzchenwl/multi-ssl-nginx-conf
+you@host$ cd multi-ssl-nginx-conf
+
 you@host$ docker run -it -p 80:80 -p 443:443 \
            -v $PWD/nginx.conf:/etc/nginx/nginx.conf \
            -v $PWD/ssl:/etc/nginx/ssl \
