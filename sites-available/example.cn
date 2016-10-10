@@ -1,0 +1,9 @@
+server {
+listen 443;
+server_name example.cn;
+root /usr/share/nginx/html;
+index index.html index.htm;
+ssl on;
+ssl_certificate /etc/nginx/ssl/example.cn/server.crt;
+ssl_certificate_key /etc/nginx/ssl/example.cn/server.key;
+}
