@@ -8,12 +8,12 @@
 you@host$ git clone https://github.com/qzchenwl/multi-ssl-nginx-conf
 you@host$ cd multi-ssl-nginx-conf
 
-you@host$ docker run -it -p 80:80 -p 443:443 \
+you@host$ docker run --name nginx-ssl -nginx --rm -it -p 80:80 -p 443:443 \
            -v $PWD/nginx.conf:/etc/nginx/nginx.conf \
            -v $PWD/ssl:/etc/nginx/ssl \
            -v $PWD/sites-available:/etc/nginx/sites-available \
            -v $PWD/sites-enabled:/etc/nginx/sites-enabled \
-           nginx bash
+           nginx
 
 root@docker# service nginx restart
 ```
