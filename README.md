@@ -25,6 +25,13 @@ you@host$ cd ssl
 you@host$ ./generate.sh <your-hostname>
 ```
 
+## Generate virtual host file
+
+```
+you@host$ cd sites-available
+you@host$ ./generate.sh <your-hostname>
+```
+
 ## Example virtual host file
 
 ```conf
